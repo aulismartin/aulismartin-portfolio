@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulis Martin - Music Producer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🎵 AULIS MARTIN</h1>
+                <p class="tagline">Music Producer & Beat Creator</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tracks">Tracks</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Welcome to My Music Studio</h2>
+                <p>Explore my original music productions and beats</p>
+            </div>
+        </section>
+
+        <!-- Tracks Section -->
+        <section id="tracks" class="tracks-section">
+            <div class="container">
+                <h2>My Tracks</h2>
+                <div class="tracks-grid" id="tracksGrid">
+                    <!-- Tracks will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I'm a passionate music producer specializing in electronic beats and original compositions. With years of experience in music production, I create tracks that blend creativity with technical excellence.</p>
+                <p>My work spans multiple genres including hip-hop, electronic, ambient, and experimental music. Each track is crafted with attention to detail and artistic vision.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>Interested in collaborations or commissions? Reach out!</p>
+                <div class="contact-links">
+                    <a href="mailto:your-email@example.com" class="contact-btn">Email Me</a>
+                    <a href="https://twitter.com" class="contact-btn">Twitter</a>
+                    <a href="https://soundcloud.com" class="contact-btn">SoundCloud</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Aulis Martin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Audio Player Modal -->
+    <div id="playerModal" class="player-modal">
+        <div class="player-content">
+            <span class="close-btn">&times;</span>
+            <div class="player-header">
+                <h3 id="playerTitle">Track Title</h3>
+            </div>
+            <audio id="audioPlayer" controls>
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="player-info">
+                <p id="playerDesc">Track description</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
