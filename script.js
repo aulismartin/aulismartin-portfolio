@@ -1,51 +1,63 @@
-// Sample tracks data - Replace with your actual tracks
+// Tracks data with Spotify links
 const tracks = [
     {
         id: 1,
         title: "Midnight Dreams",
+        artist: "Aulis Martin",
         genre: "Lo-Fi Hip Hop",
         description: "A smooth and relaxing beat perfect for studying or late-night sessions.",
         audioUrl: "#",
+        spotifyUrl: "https://open.spotify.com/playlist/5NVNP2DgG7Tjtxta3R3V65",
         icon: "🎧"
     },
     {
         id: 2,
         title: "Electric Vibes",
+        artist: "Aulis Martin",
         genre: "Electronic",
         description: "High-energy electronic track with dynamic synths and powerful bass.",
         audioUrl: "#",
+        spotifyUrl: "https://open.spotify.com/playlist/5NVNP2DgG7Tjtxta3R3V65",
         icon: "⚡"
     },
     {
         id: 3,
         title: "Ambient Flow",
+        artist: "Aulis Martin",
         genre: "Ambient",
         description: "Atmospheric and meditative soundscape for relaxation and focus.",
         audioUrl: "#",
+        spotifyUrl: "https://open.spotify.com/playlist/5NVNP2DgG7Tjtxta3R3V65",
         icon: "🌊"
     },
     {
         id: 4,
         title: "Urban Rhythm",
+        artist: "Aulis Martin",
         genre: "Hip Hop",
         description: "Contemporary hip-hop beat with crisp drums and modern production.",
         audioUrl: "#",
+        spotifyUrl: "https://open.spotify.com/playlist/5NVNP2DgG7Tjtxta3R3V65",
         icon: "🎤"
     },
     {
         id: 5,
         title: "Sunset Melody",
+        artist: "Aulis Martin",
         genre: "Chillwave",
         description: "Smooth and mellow track perfect for unwinding after a long day.",
         audioUrl: "#",
+        spotifyUrl: "https://open.spotify.com/playlist/5NVNP2DgG7Tjtxta3R3V65",
         icon: "🌅"
     },
     {
         id: 6,
         title: "Cosmic Journey",
+        artist: "Aulis Martin",
         genre: "Experimental",
         description: "An experimental piece blending organic and electronic elements.",
         audioUrl: "#",
+        spotifyUrl: "https://open.spotify.com/playlist/5NVNP2DgG7Tjtxta3R3V65",
         icon: "🚀"
     }
 ];
@@ -73,9 +85,13 @@ function renderTracks() {
         trackCard.innerHTML = `
             <div class="track-icon">${track.icon}</div>
             <h3>${track.title}</h3>
+            <p class="artist">${track.artist}</p>
             <p>${track.genre}</p>
             <p style="font-size: 12px; color: #888; margin-bottom: 15px;">${track.description}</p>
-            <button class="play-btn" onclick="openPlayer(${track.id})">▶ Play</button>
+            <div class="track-buttons">
+                <button class="play-btn" onclick="openPlayer(${track.id})">▶ Play</button>
+                <a href="${track.spotifyUrl}" target="_blank" class="spotify-btn">🎵 Spotify</a>
+            </div>
         `;
         tracksGrid.appendChild(trackCard);
     });
